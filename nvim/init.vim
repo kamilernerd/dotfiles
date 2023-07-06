@@ -1,3 +1,5 @@
+" vim-bootstrap 2023-07-06 08:24:31
+
 "*****************************************************************************
 "" Vim-Plug core
 "*****************************************************************************
@@ -8,7 +10,7 @@ else
   let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = "c,go,html,javascript,perl,php,python,rust,typescript"
+let g:vim_bootstrap_langs = "c,go,html,javascript,python,typescript"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 let g:vim_bootstrap_theme = "gruvbox"
 let g:vim_bootstrap_frams = ""
@@ -96,42 +98,10 @@ Plug 'mattn/emmet-vim'
 Plug 'jelera/vim-javascript-syntax'
 
 
-" perl
-"" Perl Bundle
-Plug 'vim-perl/vim-perl'
-Plug 'c9s/perlomni.vim'
-
-
-" php
-"" PHP Bundle
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
-Plug 'stephpy/vim-php-cs-fixer'
-
-
 " python
 "" Python Bundle
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-
-" rust
-" Vim racer
-Plug 'racer-rust/vim-racer'
-
-" Rust.vim
-Plug 'rust-lang/rust.vim'
-
-" Async.vim
-Plug 'prabirshrestha/async.vim'
-
-" Vim lsp
-Plug 'prabirshrestha/vim-lsp'
-
-" Asyncomplete.vim
-Plug 'prabirshrestha/asyncomplete.vim'
-
-" Asyncomplete lsp.vim
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 
 " typescript
@@ -160,6 +130,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
+
 
 "" Fix backspace indent
 set backspace=indent,eol,start
@@ -308,7 +279,6 @@ let Grep_Skip_Dirs = '.git node_modules'
 
 " terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
-
 
 "*****************************************************************************
 "" Commands
@@ -574,36 +544,6 @@ augroup vimrc-javascript
 augroup END
 
 
-" perl
-
-
-" php
-" Phpactor plugin
-" Include use statement
-nmap <Leader>u :call phpactor#UseAdd()<CR>
-" Invoke the context menu
-nmap <Leader>mm :call phpactor#ContextMenu()<CR>
-" Invoke the navigation menu
-nmap <Leader>nn :call phpactor#Navigate()<CR>
-" Goto definition of class or class member under the cursor
-nmap <Leader>oo :call phpactor#GotoDefinition()<CR>
-nmap <Leader>oh :call phpactor#GotoDefinition('hsplit')<CR>
-nmap <Leader>ov :call phpactor#GotoDefinition('vsplit')<CR>
-nmap <Leader>ot :call phpactor#GotoDefinition('tabnew')<CR>
-" Show brief information about the symbol under the cursor
-nmap <Leader>K :call phpactor#Hover()<CR>
-" Transform the classes in the current file
-nmap <Leader>tt :call phpactor#Transform()<CR>
-" Generate a new class (replacing the current file)
-nmap <Leader>cc :call phpactor#ClassNew()<CR>
-" Extract expression (normal mode)
-nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
-" Extract expression from selection
-vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
-" Extract method from selection
-vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
-
-
 " python
 " vim-python
 augroup vimrc-python
@@ -633,14 +573,6 @@ let g:airline#extensions#virtualenv#enabled = 1
 
 " Syntax highlight
 let python_highlight_all = 1
-
-
-" rust
-" Vim racer
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 
 " typescript
