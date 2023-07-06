@@ -10,7 +10,7 @@ endif
 
 let g:vim_bootstrap_langs = "c,go,html,javascript,python,typescript"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
-let g:vim_bootstrap_theme = "gruvbox"
+let g:vim_bootstrap_theme = "nord"
 let g:vim_bootstrap_frams = ""
 
 if !filereadable(vimplug_exists)
@@ -237,7 +237,8 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+"let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'nord'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
