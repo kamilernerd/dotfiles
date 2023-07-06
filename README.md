@@ -3,6 +3,8 @@
  - Have tmux installed
  - Have neovim installed
 
+## Unpack in the home directory
+
 Install fots on the system
  https://sourcefoundry.org/hack/ (Enable it in the terminal)
 
