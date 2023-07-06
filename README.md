@@ -25,4 +25,4 @@ Install python
 
 Open nvim
  ```:PlugInstall```
-
+ ```:CocInstall coc-tsserver coc-html coc-css coc-go coc-clangd```
