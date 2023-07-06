@@ -17,6 +17,7 @@ Install nodejs
 
 Install python
  /opt/homebrew/bin/pip3 install --user --upgrade neovim (On mac)
+ sudo apt-get install python3-neovim (On debian/ubuntu)
 
 Open nvim
  :PlugInstall
