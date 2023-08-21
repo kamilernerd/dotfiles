@@ -8,9 +8,8 @@ Unpack in the home directory
 Install fots on the system
  https://sourcefoundry.org/hack/ (Enable it in the terminal)
 
-
 Open tmux session
-```trl + I (Capital i)```
+```ctrl + I (Capital i)```
 
 Install nodejs 
  ```npm install -g neovim```
@@ -25,4 +24,4 @@ Install python
 
 Open nvim
  ```:PlugInstall```
- ```:CocInstall coc-tsserver coc-html coc-css coc-go coc-clangd coc-json```
+ ```:Mason```
