@@ -238,31 +238,30 @@ vim.cmd('cnoreabbrev Qall qall')
 -- [[ Basic Keymaps ]]
 --
 -- Screen split
-vim.keymap.set('n', '<leader>h', ':<C-u>split<CR>', { expr = false, silent = true })
-vim.keymap.set('n', '<leader>v', ':<C-u>vsplit<CR>', { expr = false, silent = true })
+vim.keymap.set('n', '<leader>h', ':<C-u>split<CR>', { expr = false, silent = true, desc = "Split window horizontally" })
+vim.keymap.set('n', '<leader>v', ':<C-u>vsplit<CR>', { expr = false, silent = true, desc = "Split window vertically" })
 
 -- Tab navigation
-vim.keymap.set('n', '<Tab>', 'gt', { expr = false, silent = true })
-vim.keymap.set('n', '<S-Tab>', 'gT', { expr = false, silent = true })
-vim.keymap.set('n', '<S-t>', ':tabnew<CR>', { expr = false, silent = true })
+vim.keymap.set('n', '<Tab>', 'gt', { expr = false, silent = true, desc = "Next tab" })
+vim.keymap.set('n', '<S-Tab>', 'gT', { expr = false, silent = true, desc = "Prev tab" })
+vim.keymap.set('n', '<S-t>', ':tabnew<CR>', { expr = false, silent = true, desc = "New tab" })
 
 -- Buffer navigation
-vim.keymap.set('n', '<leader>bh', ':bp<CR>', { expr = false, silent = true })
-vim.keymap.set('n', '<leader>bl', ':bn<CR>', { expr = false, silent = true })
-vim.keymap.set('n', '<leader>bc', ':bd<cr>', { expr = false, silent = true })
+vim.keymap.set('n', '<leader>bh', ':bp<CR>', { expr = false, silent = true, desc = "Next buffer" })
+vim.keymap.set('n', '<leader>bl', ':bn<CR>', { expr = false, silent = true, desc = "Prev buffer" })
+vim.keymap.set('n', '<leader>bc', ':bd<cr>', { expr = false, silent = true, desc = "Close current buffer" })
 
 -- Window navigation
-vim.keymap.set('n', '<C-w-j>', '<C-w>j', { expr = false, silent = true })
-vim.keymap.set('n', '<C-w-k>', '<C-w>k', { expr = false, silent = true })
-vim.keymap.set('n', '<C-w-l>', '<C-w>l', { expr = false, silent = true })
-vim.keymap.set('n', '<C-w-h>', '<C-w>h', { expr = false, silent = true })
+vim.keymap.set('n', '<C-w-j>', '<C-w>j', { expr = false, silent = true, desc = "Navigate window down" })
+vim.keymap.set('n', '<C-w-k>', '<C-w>k', { expr = false, silent = true, desc = "Navigate window up" })
+vim.keymap.set('n', '<C-w-l>', '<C-w>l', { expr = false, silent = true, desc = "Navigate window right" })
+vim.keymap.set('n', '<C-w-h>', '<C-w>h', { expr = false, silent = true, desc = "Navigate window left"})
 
 -- Clear search
-vim.keymap.set('n', '<leader>z', ':noh<CR>', { expr = false, silent = true })
+vim.keymap.set('n', '<leader>z', ':noh<CR>', { expr = false, silent = true, desc = "Clean search" })
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -296,8 +295,8 @@ require('telescope').setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
-vim.keymap.set('n', '<leader>-', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>-', require('telescope.builtin').oldfiles, { desc = 'Find recently opened files' })
+vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = 'Find existing buffers' })
 vim.keymap.set('n', '<leader>f', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
