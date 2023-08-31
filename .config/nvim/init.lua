@@ -4,7 +4,7 @@ vim.g.mapleader = ','
 vim.g.maplocalleader = ' '
 
 -- Automatically open ALL new buffers/windows/files as tabs
-vim.cmd('au BufAdd,BufNewFile,BufRead * nested tab sball')
+--vim.cmd('au BufAdd,BufNewFile,BufRead * nested tab sball')
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
@@ -49,7 +49,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', tag = 'legacy', opts = {} },
+      { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -72,7 +72,7 @@ require('lazy').setup({
     },
   },
 
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
 
   {
     -- Set lualine as statusline
@@ -140,6 +140,94 @@ require('lazy').setup({
     end,
   },
 
+  {
+    "nvim-lua/plenary.nvim"
+  },
+
+  {
+    "startup-nvim/startup.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require "startup".setup({
+        -- every line should be same width without escaped \
+        header = {
+          type = "text",
+          oldfiles_directory = false,
+          align = "center",
+          fold_section = false,
+          title = "Header",
+          margin = 5,
+          content = {
+            "██████╗ ██╗███████╗███████╗ █████╗ ██████╗  █████╗ ██╗  ██╗███████╗██████╗ ███████╗███╗   ██╗",
+            "██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝██╔══██╗██╔════╝████╗  ██║",
+            "██████╔╝██║  ███╔╝   ███╔╝ ███████║██████╔╝███████║█████╔╝ █████╗  ██████╔╝█████╗  ██╔██╗ ██║",
+            "██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║██╔══██╗██╔══██║██╔═██╗ ██╔══╝  ██╔══██╗██╔══╝  ██║╚██╗██║",
+            "██║     ██║███████╗███████╗██║  ██║██████╔╝██║  ██║██║  ██╗███████╗██║  ██║███████╗██║ ╚████║",
+            "╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝",
+          },
+          highlight = "Statement",
+          default_color = "",
+          oldfiles_amount = 0,
+        },
+        -- name which will be displayed and command
+        body = {
+          type = "mapping",
+          oldfiles_directory = false,
+          align = "center",
+          fold_section = false,
+          title = "",
+          margin = 5,
+          content = {
+            { "Find File",    "Telescope find_files",            "<leader>sf" },
+            { "Find Word",    "Telescope live_grep",             "<leader>lg" },
+            { "Recent Files", "Telescope oldfiles",              "<leader>-" },
+            { "New File",     "lua require'startup'.new_file()", "<leader>nf" },
+          },
+          highlight = "String",
+          default_color = "",
+          oldfiles_amount = 0,
+        },
+        footer = {
+          type = "text",
+          oldfiles_directory = false,
+          align = "center",
+          fold_section = false,
+          title = "Footer",
+          margin = 5,
+          content = { "" },
+          highlight = "Number",
+          default_color = "",
+          oldfiles_amount = 0,
+        },
+
+        options = {
+          mapping_keys = true,
+          cursor_column = 0.5,
+          empty_lines_between_mappings = true,
+          disable_statuslines = true,
+          paddings = { 1, 3, 3, 0 },
+        },
+        mappings = {
+          execute_command = "<CR>",
+          open_file = "o",
+          open_file_split = "<c-o>",
+          open_section = "<TAB>",
+          open_help = "?",
+        },
+        colors = {
+          background = "#1f2227",
+          folded_section = "#56b6c2",
+        },
+        parts = { "header", "body", "footer" },
+      })
+    end
+  },
+
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
 
 }, {})
 
@@ -209,7 +297,7 @@ vim.o.guioptions = 'egmrti'
 vim.o.gfn = 'Monospace\\ 10'
 
 --Disable the blinking cursor.
-vim.o.gcr='a:blinkon1'
+vim.o.gcr = 'a:blinkon1'
 
 --Status bar
 vim.o.laststatus = 2
@@ -255,7 +343,7 @@ vim.keymap.set('n', '<leader>bc', ':bd<cr>', { expr = false, silent = true, desc
 vim.keymap.set('n', '<C-w-j>', '<C-w>j', { expr = false, silent = true, desc = "Navigate window down" })
 vim.keymap.set('n', '<C-w-k>', '<C-w>k', { expr = false, silent = true, desc = "Navigate window up" })
 vim.keymap.set('n', '<C-w-l>', '<C-w>l', { expr = false, silent = true, desc = "Navigate window right" })
-vim.keymap.set('n', '<C-w-h>', '<C-w>h', { expr = false, silent = true, desc = "Navigate window left"})
+vim.keymap.set('n', '<C-w-h>', '<C-w>h', { expr = false, silent = true, desc = "Navigate window left" })
 
 -- Clear search
 vim.keymap.set('n', '<leader>z', ':noh<CR>', { expr = false, silent = true, desc = "Clean search" })
@@ -284,6 +372,8 @@ require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
       "node_modules",
+      "go",
+      "target"
     },
     mappings = {
       i = {
@@ -403,6 +493,13 @@ local on_attach = function(_, bufnr)
 
     vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
   end
+
+  vim.api.nvim_create_autocmd("BufWritePre", {
+    buffer = buffer,
+    callback = function()
+      vim.lsp.buf.format { async = false }
+    end
+  })
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
