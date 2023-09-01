@@ -187,47 +187,38 @@ require('lazy').setup({
           default_color = "",
           oldfiles_amount = 0,
         },
-        footer = {
-          type = "text",
-          oldfiles_directory = false,
-          align = "center",
-          fold_section = false,
-          title = "Footer",
-          margin = 5,
-          content = { "" },
-          highlight = "Number",
-          default_color = "",
-          oldfiles_amount = 0,
-        },
-
-        options = {
-          mapping_keys = true,
-          cursor_column = 0.5,
-          empty_lines_between_mappings = true,
-          disable_statuslines = true,
-          paddings = { 1, 3, 3, 0 },
-        },
-        mappings = {
-          execute_command = "<CR>",
-          open_file = "o",
-          open_file_split = "<c-o>",
-          open_section = "<TAB>",
-          open_help = "?",
-        },
-        colors = {
-          background = "#1f2227",
-          folded_section = "#56b6c2",
-        },
-        parts = { "header", "body", "footer" },
       })
     end
   },
 
+  -- Creates auto pairs for ( etc.
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
   },
+
+  {
+    'nvim-tree/nvim-web-devicons',
+  },
+
+  -- Buffers as tabs
+  {
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      local bufferline = require("bufferline")
+      vim.o.termguicolors = true
+      bufferline.setup({
+        options = {
+          mode = "buffers",
+          themable = true,
+          style_preset = bufferline.style_preset.minimal
+        }
+      })
+    end
+  }
 
 }, {})
 
@@ -330,14 +321,15 @@ vim.keymap.set('n', '<leader>h', ':<C-u>split<CR>', { expr = false, silent = tru
 vim.keymap.set('n', '<leader>v', ':<C-u>vsplit<CR>', { expr = false, silent = true, desc = "Split window vertically" })
 
 -- Tab navigation
-vim.keymap.set('n', '<Tab>', 'gt', { expr = false, silent = true, desc = "Next tab" })
-vim.keymap.set('n', '<S-Tab>', 'gT', { expr = false, silent = true, desc = "Prev tab" })
-vim.keymap.set('n', '<S-t>', ':tabnew<CR>', { expr = false, silent = true, desc = "New tab" })
+--vim.keymap.set('n', '<Tab>', 'gt', { expr = false, silent = true, desc = "Next tab" })
+--vim.keymap.set('n', '<S-Tab>', 'gT', { expr = false, silent = true, desc = "Prev tab" })
+--vim.keymap.set('n', '<S-t>', ':tabnew<CR>', { expr = false, silent = true, desc = "New tab" })
 
 -- Buffer navigation
-vim.keymap.set('n', '<leader>bh', ':bp<CR>', { expr = false, silent = true, desc = "Next buffer" })
-vim.keymap.set('n', '<leader>bl', ':bn<CR>', { expr = false, silent = true, desc = "Prev buffer" })
-vim.keymap.set('n', '<leader>bc', ':bd<cr>', { expr = false, silent = true, desc = "Close current buffer" })
+vim.keymap.set('n', '<Tab>', ':bn<CR>', { expr = false, silent = true, desc = "Next buffer" })
+vim.keymap.set('n', '<S-Tab>', ':bp<CR>', { expr = false, silent = true, desc = "Prev buffer" })
+vim.keymap.set('n', '<S-x>', ':bd<CR>', { expr = false, silent = true, desc = "Close current buffer" })
+vim.keymap.set('n', '<S-c>', ':enew<CR>', { expr = false, silent = true, desc = "Open new buffer" })
 
 -- Window navigation
 vim.keymap.set('n', '<C-w-j>', '<C-w>j', { expr = false, silent = true, desc = "Navigate window down" })
@@ -372,7 +364,6 @@ require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
       "node_modules",
-      "go",
       "target"
     },
     mappings = {
@@ -388,6 +379,8 @@ require('telescope').setup {
 pcall(require('telescope').load_extension, 'fzf')
 
 -- See `:help telescope.builtin`
+vim.keymap.set('n', '<leader>.', require('telescope.builtin').treesitter,
+  { desc = 'Search for functions, variables etc.' })
 vim.keymap.set('n', '<leader>-', require('telescope.builtin').oldfiles, { desc = 'Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = 'Find existing buffers' })
 vim.keymap.set('n', '<leader>f', function()
