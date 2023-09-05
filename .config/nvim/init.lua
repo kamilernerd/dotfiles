@@ -81,7 +81,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'gruvbox',
+        theme = 'everblush',
         component_separators = '|',
         section_separators = '',
       },
@@ -135,9 +135,12 @@ require('lazy').setup({
   {
     'morhetz/gruvbox',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'gruvbox'
-    end,
+  },
+
+  {
+    'Everblush/nvim',
+    name = 'everblush',
+    priority = 1000,
   },
 
   {
@@ -256,6 +259,7 @@ require('lazy').setup({
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
+vim.cmd('colorscheme everblush')
 
 -- Make line numbers default
 vim.wo.number = true
@@ -294,7 +298,7 @@ vim.o.termguicolors = true
 -- Encoding
 vim.o.encoding = 'utf-8'
 vim.o.fileencoding = 'utf-8'
-vim.o.fileencodings = 'utf-8'
+-- vim.o.fileencodings = 'utf-8'
 
 -- Fix backspace inden
 vim.o.backspace = 'indent,eol,start'
