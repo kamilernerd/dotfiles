@@ -81,7 +81,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'everblush',
+        theme = 'gruvbox',
         component_separators = '|',
         section_separators = '',
       },
@@ -259,7 +259,7 @@ require('lazy').setup({
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
-vim.cmd('colorscheme everblush')
+vim.cmd('colorscheme gruvbox')
 
 -- Make line numbers default
 vim.wo.number = true
