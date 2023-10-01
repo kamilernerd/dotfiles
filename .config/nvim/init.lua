@@ -22,14 +22,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
---  You can also configure plugins after the setup call,
---    as they will be available in your neovim runtime.
-require('lazy').setup({
-  -- NOTE: First, some plugins that don't require any configuration
 
+require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -81,7 +75,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'gruvbox',
+        theme = 'nightfly',
         component_separators = '|',
         section_separators = '',
       },
@@ -94,7 +88,7 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
-      char = '┊',
+      char = '',
       show_trailing_blankline_indent = false,
     },
   },
@@ -130,6 +124,11 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+  },
+
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    priority = 1000,
   },
 
   {
@@ -259,7 +258,7 @@ require('lazy').setup({
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme oxocarbon')
 
 -- Make line numbers default
 vim.wo.number = true
@@ -423,7 +422,7 @@ vim.keymap.set('n', '<leader>f', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
     winblend = 10,
-    previewer = false,
+    previewer = true,
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
@@ -567,11 +566,11 @@ end
 --  If you want to override the default filetypes that your language server will attach to you can
 --  define the property 'filetypes' to the map in question.
 local servers = {
-  -- clangd = {},
-  -- gopls = {},
-  -- pyright = {},
-  -- rust_analyzer = {},
-  -- tsserver = {},
+  clangd = {},
+  gopls = {},
+  pyright = {},
+  rust_analyzer = {},
+  tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
 
   lua_ls = {
