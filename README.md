@@ -11,7 +11,7 @@ Install fots on the system
 non-ASCII text, then select nerd and enable use-ligatures")
 
 Open tmux session
-```ctrl + I (Capital i)```
+```ctrl + b + I (Capital i)```
 
 Install nodejs 
  ```npm install -g neovim```
