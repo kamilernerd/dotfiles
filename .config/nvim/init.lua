@@ -22,7 +22,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -45,7 +44,8 @@ require('lazy').setup({
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
       { 'j-hui/fidget.nvim',       tag = 'legacy', opts = {} },
 
-      -- Additional lua configuration, makes nvim stuff amazing!
+      -- Additional lua
+      highlight = {},
       'folke/neodev.nvim',
     },
   },
@@ -75,7 +75,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'nightfly',
+        theme = 'gruvbox',
         component_separators = '|',
         section_separators = '',
       },
@@ -87,9 +87,16 @@ require('lazy').setup({
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    main = "ibl",
     opts = {
-      char = '',
-      show_trailing_blankline_indent = false,
+      indent = {
+        char = '',
+      },
+      whitespace = {
+      },
+      scope = {
+        enabled = false,
+      },
     },
   },
 
@@ -308,7 +315,7 @@ vim.o.softtabstop = 0
 vim.o.shiftwidth = 2
 vim.expandtab = true
 
--- Enable hidden buffers
+-- Enable hidden bufferstrue
 vim.o.hidden = true
 
 -- Searching
@@ -399,7 +406,8 @@ require('telescope').setup {
   defaults = {
     file_ignore_patterns = {
       "node_modules",
-      "target"
+      "target",
+      "vendor"
     },
     mappings = {
       i = {
@@ -437,10 +445,10 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-  auto_install = false,
+  auto_install = true,
 
   highlight = { enable = true },
   indent = { enable = true },
@@ -571,8 +579,7 @@ local servers = {
   pyright = {},
   rust_analyzer = {},
   tsserver = {},
-  -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
+  html = { filetypes = { 'html', 'twig', 'hbs' } },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
