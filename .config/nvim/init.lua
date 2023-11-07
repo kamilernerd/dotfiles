@@ -75,7 +75,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'gruvbox',
+        theme = 'ayu_dark',
         component_separators = '|',
         section_separators = '',
       },
@@ -265,7 +265,9 @@ require('lazy').setup({
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
-vim.cmd('colorscheme oxocarbon')
+vim.cmd('colorscheme everblush')
+vim.o.background = "dark"
+vim.o.bg = "dark"
 
 -- Make line numbers default
 vim.wo.number = true
@@ -342,7 +344,6 @@ vim.o.modelines = 10
 vim.o.wrap = true
 vim.o.wm = 2
 vim.o.textwidth = 79
-
 
 -- overrides some default quit and save commands
 vim.cmd('cnoreabbrev W! w!')
@@ -445,7 +446,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'vimdoc', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'rust', 'typescript', 'vimdoc', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = true,
@@ -576,10 +577,8 @@ end
 local servers = {
   clangd = {},
   gopls = {},
-  pyright = {},
   rust_analyzer = {},
   tsserver = {},
-  html = { filetypes = { 'html', 'twig', 'hbs' } },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
