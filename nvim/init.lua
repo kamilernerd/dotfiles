@@ -259,6 +259,13 @@ require('lazy').setup({
         }
       })
     end
+  },
+
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    opts = {
+    }
   }
 
 }, {})
@@ -359,6 +366,14 @@ vim.cmd('cnoreabbrev Qall qall')
 
 -- [[ Basic Keymaps ]]
 --
+-- Terminall mapping
+vim.keymap.set('n', '<leader>tf', ':ToggleTerm direction=float<CR>',
+  { expr = false, silent = true, desc = "Open terminal in floating window" })
+vim.keymap.set('n', '<leader>tv', ':ToggleTerm direction=vertical size=50<CR>',
+  { expr = false, silent = true, desc = "Open terminal vertically" })
+vim.keymap.set('n', '<leader>th', ':ToggleTerm direction=horizontal size=15<CR>',
+  { expr = false, silent = true, desc = "Open terminal horizontally" })
+
 -- Screen split
 vim.keymap.set('n', '<leader>h', ':<C-u>split<CR>', { expr = false, silent = true, desc = "Split window horizontally" })
 vim.keymap.set('n', '<leader>v', ':<C-u>vsplit<CR>', { expr = false, silent = true, desc = "Split window vertically" })
