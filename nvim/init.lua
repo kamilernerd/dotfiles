@@ -111,15 +111,15 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  {
-    "nyoom-engineering/oxocarbon.nvim",
-    priority = 1000,
-  },
-
-  {
-    'morhetz/gruvbox',
-    priority = 1000,
-  },
+  -- {
+  --   "nyoom-engineering/oxocarbon.nvim",
+  --   priority = 1000,
+  -- },
+  --
+  -- {
+  --   'morhetz/gruvbox',
+  --   priority = 1000,
+  -- },
 
   {
     'Everblush/nvim',

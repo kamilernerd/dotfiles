@@ -1,0 +1,23 @@
+# https://github.com/alacritty/alacritty-theme
+import = [
+    "~/.config/alacritty/themes/themes/carbonfox.toml"
+]
+
+live_config_reload = true
+
+[font]
+size = 10.5
+
+[window]
+decorations = "full"
+dimensions.columns = 100
+dimensions.lines = 21
+title = "0x0"
+
+[window.padding]
+x = 0
+y = 0
+
+[cursor]
+style.shape = "Block"
+style.blinking = "Always"
