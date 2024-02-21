@@ -1,6 +1,6 @@
 # https://github.com/alacritty/alacritty-theme
 import = [
-    "~/.config/alacritty/themes/themes/carbonfox.toml"
+    "~/.config/alacritty/themes/themes/everblush.toml"
 ]
 
 live_config_reload = true

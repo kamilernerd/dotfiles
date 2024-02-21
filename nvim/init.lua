@@ -111,15 +111,15 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  -- {
-  --   "nyoom-engineering/oxocarbon.nvim",
-  --   priority = 1000,
-  -- },
-  --
-  -- {
-  --   'morhetz/gruvbox',
-  --   priority = 1000,
-  -- },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    priority = 998,
+  },
+
+  {
+    'morhetz/gruvbox',
+    priority = 999,
+  },
 
   {
     'Everblush/nvim',
@@ -144,14 +144,7 @@ require('lazy').setup({
           fold_section = false,
           title = "Header",
           margin = 5,
-          content = {
-            "██████╗ ██╗███████╗███████╗ █████╗ ██████╗  █████╗ ██╗  ██╗███████╗██████╗ ███████╗███╗   ██╗",
-            "██╔══██╗██║╚══███╔╝╚══███╔╝██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝██╔══██╗██╔════╝████╗  ██║",
-            "██████╔╝██║  ███╔╝   ███╔╝ ███████║██████╔╝███████║█████╔╝ █████╗  ██████╔╝█████╗  ██╔██╗ ██║",
-            "██╔═══╝ ██║ ███╔╝   ███╔╝  ██╔══██║██╔══██╗██╔══██║██╔═██╗ ██╔══╝  ██╔══██╗██╔══╝  ██║╚██╗██║",
-            "██║     ██║███████╗███████╗██║  ██║██████╔╝██║  ██║██║  ██╗███████╗██║  ██║███████╗██║ ╚████║",
-            "╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝",
-          },
+          content = {},
           highlight = "Statement",
           default_color = "",
           oldfiles_amount = 0,
@@ -245,12 +238,11 @@ require('lazy').setup({
     opts = {
     }
   }
-
 }, {})
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
-vim.cmd('colorscheme everblush')
+vim.cmd('colorscheme oxocarbon')
 vim.o.background = "dark"
 vim.o.bg = "dark"
 
@@ -401,7 +393,10 @@ require('telescope').setup {
     file_ignore_patterns = {
       "node_modules",
       "target",
-      "vendor"
+      "vendor",
+      "public",
+      "build",
+      "bin"
     },
     mappings = {
       i = {
