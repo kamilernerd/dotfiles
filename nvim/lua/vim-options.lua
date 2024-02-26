@@ -118,5 +118,5 @@ vim.keymap.set('n', '<leader>z', ':noh<CR>', { expr = false, silent = true, desc
 -- FIX TAB INDENTATION IN VISUAL AND INSERT MODE
 local opts = { noremap = true, silent = true }
 vim.keymap.set("i", "<S-Tab>", "<C-\\><C-N><<<C-\\><C-N>^i", opts)
-vim.keymap.set("v", "<Tab>", ">gv", opts)
-vim.keymap.set("v", "<S-Tab>", "<gv", opts)
+vim.keymap.set("v",    "<Tab>",         ">gv", opts)
+vim.keymap.set("v",    "<S-Tab>",       "<gv", opts)
