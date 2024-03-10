@@ -27,3 +27,6 @@ Open nvim
  ```:Mason```
 
 Run ```./install.sh install```
+
+### Wallpapers
+I don't remember where I found these wallpapers. Sorry.
