@@ -1,4 +1,4 @@
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme everblush')
 vim.o.background = "dark"
 vim.o.bg = "dark"
 
