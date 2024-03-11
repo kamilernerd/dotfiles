@@ -12,6 +12,7 @@ Requirements
     - nm-applet (Wifi manager)
     - zsh (Shell)
     - pulseaudio (If not included in the distro)
+    - picom (X11 compositor)
 
 ### Unpack in the home directory
 Install fots on the system

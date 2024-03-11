@@ -1,5 +1,5 @@
 #! /bin/bash
-declare -a dirs=("i3" "polybar" "nvim")
+declare -a dirs=("i3" "polybar" "nvim" "picom")
 
 CONFIG_DIR=$HOME/.config
 
