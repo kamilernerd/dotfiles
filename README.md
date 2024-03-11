@@ -13,22 +13,15 @@
 - pulseaudio (If not included in the distro)
 - picom (X11 compositor) # Disabled due to high cpu usage
 
-<<<<<<< Updated upstream
-### Fonts
-- ```https://sourcefoundry.org/hack/``` (Enable it in the terminal)
-- ```https://www.nerdfonts.com/font-downloads``` (Enable "Use a different font for
-=======
 ### TODO
-Install dunst
-Install some cool screenshot tool
-Install powermenu (rofi?)
+- Install dunst
+- Install some cool screenshot tool
+- Install powermenu (rofi?)
+- Add powermenu (https://github.com/adi1090x/rofi?tab=readme-ov-file#with-polybar)
 
-### Unpack in the home directory
-Install fots on the system
- https://sourcefoundry.org/hack/ (Enable it in the terminal)
- https://www.nerdfonts.com/font-downloads (Enable "Use a different font for
->>>>>>> Stashed changes
-non-ASCII text, then select nerd and enable use-ligatures")
+### Fonts
+- ```https://sourcefoundry.org/hack/```
+- ```https://www.nerdfonts.com/font-downloads```
 
 ### Actually install configs
 Run ```./install.sh install```
