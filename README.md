@@ -1,3 +1,5 @@
+## i3 configs and stuffs
+
 ### Installation requirements
 - i3wm (Window manager. When using Fedora checkout @i3 and @i3-extended)
 - tmux (Terminal multiplexer)
