@@ -1,11 +1,11 @@
 local colors = {
-  blue   = '#80a0ff',
-  cyan   = '#79dac8',
-  black  = '#080808',
-  white  = '#c6c6c6',
-  red    = '#ff5189',
-  violet = '#d183e8',
-  grey   = '#303030',
+  blue   = '#67b0e8',
+  cyan   = '#6cbfbf',
+  black  = '#141b1e',
+  white  = '#dadada',
+  red    = '#e57474',
+  violet = '#c47fd5',
+  grey   = '#232a2d', -- Using everblush dark gray
 }
 
 local bubbles_theme = {
@@ -31,7 +31,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "gruvbox_dark", -- Can use bubbles_theme too
+				theme = bubbles_theme, -- Can use bubbles_theme too
 				component_separators = '|',
 				-- section_separators = { left = '', right = '' },
 			},
