@@ -13,9 +13,21 @@
 - pulseaudio (If not included in the distro)
 - picom (X11 compositor) # Disabled due to high cpu usage
 
+<<<<<<< Updated upstream
 ### Fonts
 - ```https://sourcefoundry.org/hack/``` (Enable it in the terminal)
 - ```https://www.nerdfonts.com/font-downloads``` (Enable "Use a different font for
+=======
+### TODO
+Install dunst
+Install some cool screenshot tool
+Install powermenu (rofi?)
+
+### Unpack in the home directory
+Install fots on the system
+ https://sourcefoundry.org/hack/ (Enable it in the terminal)
+ https://www.nerdfonts.com/font-downloads (Enable "Use a different font for
+>>>>>>> Stashed changes
 non-ASCII text, then select nerd and enable use-ligatures")
 
 ### Actually install configs
