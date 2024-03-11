@@ -1,5 +1,5 @@
 #! /bin/bash
-declare -a dirs=("i3" "polybar" "nvim" "picom")
+declare -a dirs=("nvim")
 
 CONFIG_DIR=$HOME/.config
 
@@ -37,6 +37,7 @@ reinstall() {
 }
 
 help() {
+	echo "--- This script is only for NVIM and TMUX ---"
 	echo "Usage: ./install.sh [install|remove|reinstall|help]"
 	echo "  install   - Installs dotfiles"
 	echo "  remove    - Uninstalls dotfiles"
