@@ -1,5 +1,5 @@
 ### Installation requirements
-- i3wm (Window manager)
+- i3wm (Window manager. When using Fedora checkout @i3 and @i3-extended)
 - tmux (Terminal multiplexer)
 - neovim (Text editor)
 - arandr (Nice screen configurator)
