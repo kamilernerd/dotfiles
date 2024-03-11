@@ -1,23 +1,8 @@
 ### Installation requirements
-- i3wm (Window manager. When using Fedora checkout @i3 and @i3-extended)
 - tmux (Terminal multiplexer)
 - neovim (Text editor)
-- arandr (Nice screen configurator)
-- feh (Terminal image viewer)
-- polybar (Topbar)
-- nitrogen (Wallpapers)
 - Alacritty (Terminal emulator)
-- xfce4-power-manager (Power manager with cool options)
-- nm-applet (Wifi manager)
 - zsh (Shell)
-- pulseaudio (If not included in the distro)
-- picom (X11 compositor) # Disabled due to high cpu usage
-
-### TODO
-- Install dunst
-- Install some cool screenshot tool
-- Install powermenu (rofi?)
-- Add powermenu (https://github.com/adi1090x/rofi?tab=readme-ov-file#with-polybar)
 
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
