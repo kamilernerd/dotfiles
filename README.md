@@ -1,5 +1,4 @@
-### Installation
-Requirements
+### Installation requirements
     - i3wm (Window manager)
     - tmux (Terminal multiplexer)
     - neovim (Text editor)
@@ -14,7 +13,7 @@ Requirements
     - pulseaudio (If not included in the distro)
     - picom (X11 compositor) # Disabled due to high cpu usage
 
-### Unpack in the home directory
+### Fonts
 Install fots on the system
  https://sourcefoundry.org/hack/ (Enable it in the terminal)
  https://www.nerdfonts.com/font-downloads (Enable "Use a different font for
@@ -27,7 +26,13 @@ Open nvim
  ```:Lazy```
  ```:Mason```
 
+### Installation steps
 Run ```./install.sh install```
+
+### Themes
+Everything here is using either ```Everblush``` or ```Oxocarbon```
+Oxocarbon - https://github.com/nyoom-engineering/oxocarbon?tab=readme-ov-file
+Everblush - https://github.com/Everblush
 
 ### Wallpapers
 I don't remember where I found these wallpapers. Sorry.
