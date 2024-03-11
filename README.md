@@ -14,6 +14,7 @@
 - zsh (Shell)
 - pulseaudio (If not included in the distro)
 - picom (X11 compositor) # Disabled due to high cpu usage
+- rofi (App launcher, can be used as powermenu and screenshot tool)
 
 ### TODO
 - Install dunst
