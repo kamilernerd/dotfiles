@@ -1,5 +1,5 @@
 #! /bin/bash
-declare -a dirs=("nvim")
+declare -a dirs=("nvim" "alacritty")
 
 CONFIG_DIR=$HOME/.config
 
