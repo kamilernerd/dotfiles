@@ -8,6 +8,7 @@ return {
 					gopls = {},
 					tsserver = {},
 					rust_analyzer = {},
+					clangd = {},
 				})
 			})
 		end,
@@ -23,18 +24,18 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 			local lspconfig = require("lspconfig")
-			lspconfig.tsserver.setup({
-				capabilities = capabilities
-			})
-			lspconfig.html.setup({
-				capabilities = capabilities
-			})
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities
-			})
+
+			local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls' }
+			for _, lsp in ipairs(servers) do
+				lspconfig[lsp].setup {
+					-- on_attach = my_custom_on_attach,
+					capabilities = capabilities,
+				}
+			end
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})

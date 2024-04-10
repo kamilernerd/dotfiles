@@ -11,8 +11,8 @@ return {
 			"saadparwaiz1/cmp_luasnip",     -- for lua autocompletion
 			"rafamadriz/friendly-snippets", -- useful snippets library
 			"onsails/lspkind.nvim",         -- vs-code like pictograms
-			'saadparwaiz1/cmp_luasnip',
-			'hrsh7th/cmp-nvim-lsp',
+			'saadparwaiz1/cmp_luasnip',			-- snippets source for nvim-cmp
+			'hrsh7th/cmp-nvim-lsp', 				-- lsp source for nvim-cmp
 		},
 	},
 	{
