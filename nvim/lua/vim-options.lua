@@ -1,4 +1,4 @@
-vim.cmd('colorscheme everblush')
+vim.cmd('colorscheme oxocarbon')
 vim.o.background = "dark"
 vim.o.bg = "dark"
 
