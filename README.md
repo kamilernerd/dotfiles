@@ -10,11 +10,18 @@
 - nitrogen (Wallpapers)
 - Alacritty (Terminal emulator)
 - xfce4-power-manager (Power manager with cool options)
-- nm-applet (Wifi manager)
+- nm-applet (Wifi manager) (fedora: network-manager-applet)
 - zsh (Shell)
 - pulseaudio (If not included in the distro)
 - picom (X11 compositor) # Disabled due to high cpu usage
 - rofi (App launcher, can be used as powermenu and screenshot tool)
+- acpi
+- systemd (and betterlockscreen or i3lock)
+- xrandr
+- dunst
+- xclip
+- maim
+- fontawesome-fonts
 
 ### TODO
 - Install dunst

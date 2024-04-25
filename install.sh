@@ -1,7 +1,9 @@
 #! /bin/bash
-declare -a dirs=("i3" "polybar" "nvim" "picom" "alacritty")
+declare -a dirs=("i3" "polybar" "nvim" "picom" "alacritty" "rofi")
 
 CONFIG_DIR=$HOME/.config
+DIR=`pwd`
+FONT_DIR="$HOME/.local/share/fonts"
 
 delete_current_configuration() {
 	for i in "${dirs[@]}"
@@ -12,6 +14,17 @@ delete_current_configuration() {
 
 	echo "Deleting $HOME/.tmux.conf"
 	rm $HOME/.tmux.conf
+}
+
+install_fonts() {
+	if [[ -d "$FONT_DIR" ]]; then
+		cp -rf $DIR/fonts/* "$FONT_DIR"
+	else
+		mkdir -p "$FONT_DIR"
+		cp -rf $DIR/fonts/* "$FONT_DIR"
+	fi
+	echo -e ${BYellow}"[*] Updating font cache...\n" ${Color_Off}
+	fc-cache
 }
 
 install_configuration() {
@@ -27,6 +40,9 @@ install_configuration() {
 
 	echo "Installing .tmux.conf in path $HOME/.tmux.conf"
 	cp $PWD/.tmux.conf $HOME/.tmux.conf
+
+	echo "Installing fonts in path $FONT_DIR"
+	install_fonts
 }
 
 reinstall() {
