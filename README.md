@@ -24,10 +24,8 @@
 - fontawesome-fonts
 
 ### TODO
-- Install dunst
-- Install some cool screenshot tool
-- Install powermenu (rofi?)
-- Add powermenu (https://github.com/adi1090x/rofi?tab=readme-ov-file#with-polybar)
+- Just use and improve.
+- This is just too many dependencies and configuration options...
 
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
