@@ -1,5 +1,4 @@
--- vim.cmd('colorscheme oxocarbon')
-vim.cmd('colorscheme catppuccin-mocha')
+vim.cmd('colorscheme oxocarbon')
 vim.o.background = "dark"
 vim.o.bg = "dark"
 
