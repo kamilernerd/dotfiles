@@ -37,18 +37,18 @@ return {
 				}
 			end
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, {})
-			vim.keymap.set("n", "gDD", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "gII", vim.lsp.buf.implementation, {})
-			vim.keymap.set("n", "grr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "caa", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "gdd", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", ",,", vim.diagnostic.open_float, {})
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show description "})
+			vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, { desc = "Show signature "})
+			vim.keymap.set("n", "gDD", vim.lsp.buf.definition, { desc = "Go to definition" })
+			vim.keymap.set("n", "gII", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+			vim.keymap.set("n", "grr", vim.lsp.buf.references, { desc = "Show references" })
+			vim.keymap.set("n", "caa", vim.lsp.buf.code_action, { desc = "Code action" })
+			vim.keymap.set("n", "gdd", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+			vim.keymap.set("n", ",,", vim.diagnostic.open_float, { desc = "Open diagnostic" })
 
-			vim.keymap.set('n', '<space>f', function()
-				vim.lsp.buf.format { async = true }
-			end, {})
+			-- vim.keymap.set('n', '<space>f', function()
+			-- 	vim.lsp.buf.format { async = true }
+			-- end, { })
 
 			-- On cursor hover documentation/diagnostics
 			-- vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float()]]

@@ -49,15 +49,15 @@ return {
 			local builtin = require("telescope.builtin")
 
 			-- Only files
-      vim.keymap.set("n", "<leader>sf", builtin.find_files, {})
-      vim.keymap.set("n", "<leader>lf", builtin.live_grep, {})
-      vim.keymap.set("n", "<leader>of", builtin.oldfiles, {})
-      vim.keymap.set("n", "<leader>b", builtin.buffers, {})
-      vim.keymap.set("n", "<leader>sw", builtin.grep_string, {})
-      vim.keymap.set("n", "<leader>f", builtin.current_buffer_fuzzy_find, {})
+      vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Find files" })
+      vim.keymap.set("n", "<leader>lf", builtin.live_grep, { desc = "Live grep" })
+      vim.keymap.set("n", "<leader>of", builtin.oldfiles, { desc = "Old files" })
+      vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Show opened buffers" })
+      vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "Grep string" })
+      vim.keymap.set("n", "<leader>f", builtin.current_buffer_fuzzy_find, { desc = "Fzf current buffer" })
 
 			-- Git files	
-      vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
+      vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Show git files" })
     end,
   },
 }
