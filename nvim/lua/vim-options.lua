@@ -59,8 +59,8 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 --vim.o.mousemodel = 'popup'
-vim.o.t_Co = 256
-vim.o.guioptions = "egmrti"
+--vim.o.t_Co = 256
+--vim.o.guioptions = "egmrti"
 vim.o.gfn = "Monospace\\ 10"
 
 --Disable the blinking cursor.
