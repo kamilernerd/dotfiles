@@ -19,27 +19,29 @@ return {
 		},
     config = function()
       require("telescope").setup({
-        extensions = {
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown({}),
-          },
-					fzf = {
-						fuzzy = true
+				defaults = {
+					extensions = {
+						["ui-select"] = {
+							require("telescope.themes").get_dropdown({}),
+						},
+						fzf = {
+							fuzzy = true
+						}
+					},
+					mappings = {
+						i = {
+							["<C-u>"] = false,
+							["<C-d>"] = false,
+						}
+					},
+					file_ignore_patterns = {
+						"node_modules",
+						"target",
+						"vendor",
+						"public",
+						"build",
+						"bin",
 					}
-        },
-				mappings = {
-					i = {
-						["<C-u>"] = false,
-						["<C-d>"] = false,
-					}
-				},
-				file_ignore_patterns = {
-					"node_modules",
-					"target",
-					"vendor",
-					"public",
-					"build",
-					"bin",
 				}
       })
 			-- Styling
