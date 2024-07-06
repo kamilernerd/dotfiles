@@ -12,6 +12,12 @@
 - grim
 - xdg-desktop-portal-hyprland
 - hyprlock
+- dunst
+
+### Fast copy
+```
+tmux neovim alacritty zsh hyprland feh waybar nm-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst
+```
 
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
