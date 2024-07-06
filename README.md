@@ -11,6 +11,7 @@
 - pavucontrol
 - grim
 - xdg-desktop-portal-hyprland
+- hyprlock
 
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
