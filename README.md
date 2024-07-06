@@ -9,6 +9,8 @@
 - nm-applet
 - blueman
 - pavucontrol
+- grim
+- xdg-desktop-portal-hyprland
 
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
