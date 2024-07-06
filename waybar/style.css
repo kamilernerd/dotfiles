@@ -86,7 +86,8 @@ window#waybar {
 #pulseaudio.mic.muted {
   padding-bottom: 5px;
   padding-left: 12px;
-  padding-right: 18px;
+  padding-right: 15px;
+	color: #ff0000;
 }
 
 #pulseaudio.mic {
