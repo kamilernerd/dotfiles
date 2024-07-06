@@ -1,12 +1,12 @@
 #! /bin/bash
-declare -a dirs=("nvim" "alacritty")
+declare -a dirs=("nvim" "alacritty" "hypr" "waybar")
 
 CONFIG_DIR=$HOME/.config
 
 delete_current_configuration() {
 	for i in "${dirs[@]}"
 	do
-		echo "Deleting $HOME/$i"
+		echo "Deleting $CONFIG_DIR/$i"
 		rm -r "$CONFIG_DIR/$i"
 	done
 

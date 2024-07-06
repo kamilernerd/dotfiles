@@ -1,0 +1,2 @@
+# Hyprland
+hyprland feh hyprland-devel waybar nm-applet blueman pavucontrol

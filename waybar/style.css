@@ -1,0 +1,120 @@
+window#waybar {
+  font-family: FontAwesome, monospace;
+  background-color: transparent;
+  border-bottom: 0px;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  min-height: 10px;
+}
+
+.modules-right {
+  margin: 10px 10px 0 0;
+}
+.modules-center {
+  margin: 10px 0 0 0;
+}
+.modules-left {
+  margin: 10px 0 0 10px;
+}
+
+#workspaces,
+#custom-lidswitch,
+#clock {
+  padding: 0 10px;
+  background-color: #282828;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+#battery {
+	padding-left: 10px;
+	padding-right: 15px;
+  background-color: #282828;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+#custom-power {
+	padding-left: 10px;
+	padding-right: 10px;
+  background-color: #282828;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+#battery {
+  margin-left: 10px;
+}
+
+#tray {
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #282828;
+  border-radius: 20px;
+	margin-right: 10px;
+}
+
+#bluetooth {
+  padding-top: 2px;
+  padding-left: 15px;
+  padding-right: 5px;
+  background-color: #282828;
+	border-radius: 20px 0 0 20px;
+}
+
+#pulseaudio {
+  padding: 7px 15px 0 10px;
+  background-color: #282828;
+	border-radius: 0 20px 20px 0;
+}
+
+#pulseaudio.drawer {
+  background-color: #282828;
+}
+
+#pulseaudio.muted {
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 18px;
+  color: #ff0000;
+}
+
+#pulseaudio.mic.muted {
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 18px;
+}
+
+#pulseaudio.mic {
+  padding-bottom: 5px;
+  padding-left: 12px;
+  padding-right: 10px;
+	border-radius: 0 0 0 0;
+}
+
+#pulseaudio-slider {
+  background-color: #282828;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+  min-height: 5px;
+  min-width: 80px;
+  background-color: #282828;
+}
+
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: dodgerblue;
+}

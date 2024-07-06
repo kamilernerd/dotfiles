@@ -3,6 +3,12 @@
 - neovim (Text editor)
 - Alacritty (Terminal emulator)
 - zsh (Shell)
+- hyprland
+- feh
+- waybar 
+- nm-applet
+- blueman
+- pavucontrol
 
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
