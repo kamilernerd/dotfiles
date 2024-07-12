@@ -17,7 +17,18 @@ window#waybar {
   margin: 10px 0 0 10px;
 }
 
-#workspaces,
+#workspaces button {
+  padding: 0 10px;
+  background-color: #282828;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+
+#workspaces button.active {
+  border-bottom: 2px solid dodgerblue;
+}
+
 #custom-lidswitch,
 #clock {
   padding: 0 10px;
@@ -28,8 +39,8 @@ window#waybar {
 }
 
 #battery {
-	padding-left: 10px;
-	padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 15px;
   background-color: #282828;
   margin-right: 5px;
   margin-left: 5px;
@@ -37,8 +48,8 @@ window#waybar {
 }
 
 #custom-power {
-	padding-left: 10px;
-	padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #282828;
   margin-right: 5px;
   margin-left: 5px;
@@ -55,7 +66,7 @@ window#waybar {
   padding-right: 10px;
   background-color: #282828;
   border-radius: 20px;
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 #bluetooth {
@@ -63,13 +74,13 @@ window#waybar {
   padding-left: 15px;
   padding-right: 5px;
   background-color: #282828;
-	border-radius: 20px 0 0 20px;
+  border-radius: 20px 0 0 20px;
 }
 
 #pulseaudio {
   padding: 7px 15px 0 10px;
   background-color: #282828;
-	border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 #pulseaudio.drawer {
@@ -87,14 +98,14 @@ window#waybar {
   padding-bottom: 5px;
   padding-left: 12px;
   padding-right: 15px;
-	color: #ff0000;
+  color: #ff0000;
 }
 
 #pulseaudio.mic {
   padding-bottom: 5px;
   padding-left: 12px;
   padding-right: 10px;
-	border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
 }
 
 #pulseaudio-slider {
