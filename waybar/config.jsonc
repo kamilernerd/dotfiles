@@ -1,5 +1,6 @@
 [
   {
+		"name": "default",
     "layer": "top",
     "output": "eDP-1",
     "modules-left": ["hyprland/workspaces"],
@@ -14,6 +15,7 @@
     ],
   },
   {
+		"name": "multiple",
     "layer": "top",
     "output": "!eDP-1",
     "modules-left": ["hyprland/workspaces"],
@@ -27,10 +29,12 @@
       "custom/power",
     ],
     "reload_style_on_change": true,
+  },
+  {
     "clock": {
-      "format": "{:%I:%M:%S}",
+      "format": "{:%H:%M}",
       "interval": 1,
-      "tooltip-format": "\n<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "tooltip-format": "<big>{:%c}</big>",
       "calendar-weeks-pos": "right",
       "today-format": "<span color='#7645AD'><b><u>{}</u></b></span>",
       "format-calendar": "<span color='#aeaeae'><b>{}</b></span>",
@@ -49,9 +53,9 @@
       "spacing": 10,
     },
     "bluetooth": {
-      "format": " {status}",
+      "format": "",
       "format-connected": " {device_alias}",
-      "format-connected-battery": "",
+      "format-connected-battery": " {device_battery_percentage}%",
       // "format-connected-battery": " {device_alias} {device_battery_percentage}%",
       "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections}",
       "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections}\n\n{device_enumerate}",
