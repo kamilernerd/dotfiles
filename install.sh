@@ -1,5 +1,5 @@
 #! /bin/bash
-declare -a dirs=("nvim" "alacritty" "hypr" "waybar" "pwrmenu")
+declare -a dirs=("nvim" "alacritty" "hypr" "waybar" "pwrmenu" "rofi")
 
 CONFIG_DIR=$HOME/.config
 

@@ -14,10 +14,11 @@
 - hyprlock
 - dunst
 - hyprpaper
+- rofi
 
 ### Fast copy
 ```
-tmux neovim alacritty zsh hyprland feh waybar nm-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst hyprpaper
+tmux neovim alacritty zsh hyprland feh waybar nm-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst hyprpaper rofi
 ```
 
 ### Fonts
@@ -44,3 +45,6 @@ Everblush - https://github.com/Everblush
 They are from unsplash. Keeping their original name.
 
 Also. Installation path of wallpapers has to be $HOME/.local/share/backgrounds
+
+### Rofi themes
+There are some rofi themes installed, run rofi-theme-selector to install.
