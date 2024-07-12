@@ -13,10 +13,11 @@
 - xdg-desktop-portal-hyprland
 - hyprlock
 - dunst
+- hyprpaper
 
 ### Fast copy
 ```
-tmux neovim alacritty zsh hyprland feh waybar nm-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst
+tmux neovim alacritty zsh hyprland feh waybar nm-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst hyprpaper
 ```
 
 ### Fonts
@@ -40,4 +41,6 @@ Oxocarbon - https://github.com/nyoom-engineering/oxocarbon?tab=readme-ov-file
 Everblush - https://github.com/Everblush
 
 ### Wallpapers
-I don't remember where I found these wallpapers. Sorry.
+They are from unsplash. Keeping their original name.
+
+Also. Installation path of wallpapers has to be $HOME/.local/share/backgrounds
