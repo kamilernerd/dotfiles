@@ -9,12 +9,12 @@ else
 
 				if [ $1 == "stack" ]; then
 					echo "Running monitors in stack"
-					hyprctl keyword monitor "DP-1, 1920x1080@60, 0x1080, 1"
-					hyprctl keyword monitor "HDMI-A-1, 1920x1080@60, 0x0, 1"
+					hyprctl keyword monitor "DP-1, 1920x1080@73, 0x1080, 1"
+					hyprctl keyword monitor "HDMI-A-1, 1920x1080@73, 0x0, 1"
 				elif [ $1 == "sidebyside" ]; then
 					echo "Running monitors sidebyside"
-					hyprctl keyword monitor "DP-1, 1920x1080@60, 1920x0, 1"
-					hyprctl keyword monitor "HDMI-A-1, 1920x1080@60, 0x0, 1"
+					hyprctl keyword monitor "DP-1, 1920x1080@73, 1920x0, 1"
+					hyprctl keyword monitor "HDMI-A-1, 1920x1080@73, 0x0, 1"
 				fi
     fi
 fi
