@@ -7,11 +7,11 @@ return {
 		dependencies = {
 			"hrsh7th/cmp-buffer",           -- source for text in buffer
 			"hrsh7th/cmp-path",             -- source for file system paths in commands
-			"L3MON4D3/LuaSnip",             -- snippet engine
-			"saadparwaiz1/cmp_luasnip",     -- for lua autocompletion
-			"rafamadriz/friendly-snippets", -- useful snippets library
+			-- "L3MON4D3/LuaSnip",             -- snippet engine
+			-- "saadparwaiz1/cmp_luasnip",     -- for lua autocompletion
+			-- "rafamadriz/friendly-snippets", -- useful snippets library
 			"onsails/lspkind.nvim",         -- vs-code like pictograms
-			'saadparwaiz1/cmp_luasnip',			-- snippets source for nvim-cmp
+			-- 'saadparwaiz1/cmp_luasnip',			-- snippets source for nvim-cmp
 			'hrsh7th/cmp-nvim-lsp', 				-- lsp source for nvim-cmp
 		},
 	},
