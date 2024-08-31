@@ -31,7 +31,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = bubbles_theme, -- Can use bubbles_theme too
+				theme = "gruvbox_dark", -- Can use bubbles_theme too
 				component_separators = '|',
 				-- section_separators = { left = '', right = '' },
 			},
