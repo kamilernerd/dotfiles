@@ -29,7 +29,7 @@ return {
 
 			local lspconfig = require("lspconfig")
 
-			local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'gopls' }
+			local servers = { 'clangd', 'rust_analyzer', 'pyright', 'ts_ls', 'gopls' }
 			for _, lsp in ipairs(servers) do
 				lspconfig[lsp].setup {
 					-- on_attach = my_custom_on_attach,
