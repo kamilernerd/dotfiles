@@ -18,7 +18,7 @@
 
 ### Fast copy
 ```
-tmux neovim alacritty zsh hyprland feh waybar nm-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst hyprpaper rofi
+tmux neovim alacritty zsh hyprland feh waybar network-manager-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst hyprpaper rofi
 ```
 
 ### Fonts
