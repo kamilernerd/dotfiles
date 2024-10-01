@@ -21,6 +21,8 @@
 tmux neovim alacritty zsh hyprland feh waybar network-manager-applet blueman pavucontrol grim xdg-desktop-portal-hyprland hyprlock dunst hyprpaper rofi
 ```
 
+polkit-gnome when using fedora gnome
+
 ### Fonts
 - ```https://sourcefoundry.org/hack/```
 - ```https://www.nerdfonts.com/font-downloads```
